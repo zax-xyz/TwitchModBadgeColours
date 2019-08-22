@@ -17,12 +17,19 @@
 (function() {
   'use strict';
 
-  // Your code here...
   $(document).arrive(".chat-line__message", function() {
     var badge = $(this).find("[data-badge='moderator']");
+    var name = $(this).find(".chat-author__display-name");
+    var color = name.css("color");
     if (badge.length) {
-      var name = $(this).find(".chat-author__display-name");
-      badge.css("background", name.css("color"));
-    }
+      badge.css("background", color);
+    } else {
+      badge = $(this).find("[aria-label='Moderator badge']");
+      console.log(badge);
+      if (badge.length) {
+        var img = badge.replaceWith("<span class='chat-badge' aria-label='Moderator badge' style='background-blend-mode: color; display: inline-block; width:18px; height:18px'></span>")
+        $(this).find("[aria-label='Moderator badge']").css("background", `linear-gradient(${color}, ${color}), url(${img.attr('src')})`);
+      }
+    };
   });
 })();
