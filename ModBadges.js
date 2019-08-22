@@ -1,6 +1,10 @@
 // ==UserScript==
+// @id           twitchmodbadgecolours
 // @name         Twitch Mod Badge Colours
-// @namespace    http://tampermonkey.net/
+// @namespace    Twitch Mod Badge Colours
+//
+// @homepage     https://github.com/zaxutic/TwitchModBadgeColours
+// @updateURL    https://raw.githubusercontent.com/zaxutic/TwitchModBadgeColours/master/ModBadges.js
 // @version      1.0
 // @description  Make mod badges in Twitch chat the same colour as the username
 // @author       Zaxu__
