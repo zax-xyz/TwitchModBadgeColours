@@ -19,7 +19,6 @@
 
   // Your code here...
   $(document).arrive(".chat-line__message", function() {
-    console.log($(this));
     var badge = $(this).find("[data-badge='moderator']");
     if (badge.length) {
       var name = $(this).find(".chat-author__display-name");
