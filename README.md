@@ -8,3 +8,5 @@ Tampermonkey is available for all major browsers including [Firefox](https://add
 
 ## Installation
 Get the script [here](https://raw.githubusercontent.com/zaxutic/TwitchModBadgeColours/master/ModBadges.user.js). (Most userscript managers should recognise the file as a userscript and open the installation page for you, otherwise you will have to manually add it into your manager)
+
+Refresh Twitch after installation for the script to take effect.
