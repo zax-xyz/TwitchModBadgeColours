@@ -3,7 +3,7 @@ Make mod badges in Twitch the same colour as the username
 
 *Compatible with both FFZ and BTTV as well as vanilla Twitch.*
 
-![alt text](https://zaxutic/TwitchModBadgeColours/raw/master/img/bttv.png "Example screenshot")
+![alt text](https://github.com/zaxutic/TwitchModBadgeColours/raw/master/img/bttv.png "Example screenshot")
 
 ## Requirements
 Installation of this requires a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/).
