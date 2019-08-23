@@ -5,7 +5,7 @@ Make mod badges in Twitch the same colour as the username
 
 ![alt text](https://github.com/zaxutic/TwitchModBadgeColours/raw/master/img/bttv.png "Example screenshot")
 
-*Screenshot from [panicpng](https://twitter.com/panic_png)*
+*Screenshot from [panicpng](https://twitter.com/panic_png) using BTTV with rounded badges*
 
 ## Requirements
 Installation of this requires a userscript manager such as [Tampermonkey](https://www.tampermonkey.net/).
