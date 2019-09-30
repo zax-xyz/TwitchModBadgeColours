@@ -22,7 +22,7 @@
     var name = $(this).find(".chat-author__display-name");
     var color = name.css("color");
     if (badge.length) {
-      badge.css("background", color);
+      badge.css("background-color", color);
     } else {
       badge = $(this).find("[aria-label='Moderator badge']");
       console.log(badge);
