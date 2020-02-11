@@ -18,17 +18,34 @@
   'use strict';
 
   $(document).arrive(".chat-line__message", function() {
-    var badge = $(this).find("[data-badge='moderator']");
-    var name = $(this).find(".chat-author__display-name");
-    var color = name.css("color");
-    if (badge.length) {
-      badge.css("background-color", color);
+    const ffzBadge = $(this).find("[data-badge='moderator']");
+    const name = $(this).find(".chat-author__display-name");
+    const color = name.css("color");
+
+    if (ffzBadge.length) {
+      if (ffz.settings.provider._cached.get('p:0:chat.badges.style') === 6) {
+        // transparent (colored) badges
+        ffzBadge.css('background', color);
+      } else {
+        // other
+        ffzBadge.css("background-color", color);
+      }
     } else {
-      badge = $(this).find("[aria-label='Moderator badge']");
-      console.log(badge);
-      if (badge.length) {
-        var img = badge.replaceWith("<span class='chat-badge' aria-label='Moderator badge' style='background-blend-mode: color; display: inline-block; width:18px; height:18px'></span>")
-        $(this).find("[aria-label='Moderator badge']").css("background", `linear-gradient(${color}, ${color}), url(${img.attr('src')})`);
+      const otherBadge = $(this).find("[aria-label='Moderator badge']");
+
+      if (otherBadge.length) {
+        const img = otherBadge.replaceWith(`
+          <span
+            class='chat-badge'
+            aria-label='Moderator badge'
+            style='background-blend-mode: color; display: inline-block; width:18px; height:18px'
+          ></span>
+        `);
+        $(this).find("[aria-label='Moderator badge']")
+          .css(
+            "background",
+            `linear-gradient(${color}, ${color}), url(${img.attr('src')})`
+          );
       }
     };
   });
